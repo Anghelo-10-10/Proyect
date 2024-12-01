@@ -15,8 +15,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.urls import path, include
+from django.conf.urls.static import static
+from proyecto_reciclaje import settings
+
+
 from django.urls import path
+
+
+app_name = 'reciclaje'  # Esto define el namespace para la app
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('reciclaje.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
