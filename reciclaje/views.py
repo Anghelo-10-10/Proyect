@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.template import loader
+from .forms import PuntoAlmacenamientoForm
 
 # Create your views here.
 def index(request):
@@ -25,3 +26,13 @@ def puntosrecoleccion(request):
 def tiposderecoleccion(request):
     template = loader.get_template('tiposderecoleccion.html')
     return render(request, 'tiposderecoleccion.html')
+
+def crear_punto_almacenamiento(request):
+    if request.method == 'POST':
+        form = PuntoAlmacenamientoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('punto_recoleccion_form')
+    else:
+        form = PuntoAlmacenamientoForm()
+    return render(request, 'punto_recoleccion_form.html', {'form': form})
