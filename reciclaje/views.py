@@ -17,3 +17,11 @@ def informacion(request):
 def recoleccion(request):
     template = loader.get_template('recoleccion.html')
     return render(request, 'recoleccion.html')
+
+def puntosrecoleccion(request):
+    template = loader.get_template('puntosrecoleccion.html')
+    return render(request, 'puntosrecoleccion.html')
+
+def tiposderecoleccion(request):
+    template = loader.get_template('tiposderecoleccion.html')
+    return render(request, 'tiposderecoleccion.html')
