@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/home/anghelo/Escritorio/Proyecto /proyecto/bin/python3" "$0" "$@"
+'''exec' "/home/anghelo/Escritorio/Proyecto /Proyect/proyecto/bin/python3" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re

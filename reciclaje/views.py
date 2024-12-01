@@ -9,3 +9,11 @@ def index(request):
         'logged_in': request.user.is_authenticated
     }
     return render(request, 'index.html', context)
+
+def informacion(request):
+    template = loader.get_template('informacion.html')
+    return render(request, 'informacion.html')
+
+def recoleccion(request):
+    template = loader.get_template('recoleccion.html')
+    return render(request, 'recoleccion.html')

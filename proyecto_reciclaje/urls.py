@@ -23,7 +23,7 @@ from proyecto_reciclaje import settings
 from django.urls import path
 
 
-app_name = 'reciclaje'  # Esto define el namespace para la app
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
