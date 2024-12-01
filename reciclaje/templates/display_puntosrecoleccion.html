@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}{% endblock title %}
+{% block content %}
+    <div class="container">
+        <ul class="list-group" style="margin-top: 2em;">
+            <li class="list-group-item"><strong>Nombre:</strong> {{ nombre }}</li>
+            <li class="list-group-item"><strong>Dirección:</strong> {{ direccion }}</li>
+            <li class="list-group-item"><strong>Ciudad:</strong> {{ ciudad }}</li> 
+            <li class="list-group-item"><strong>Teléfono:</strong> {{ telefono }}</li>
+            <li class="list-group-item"><strong>Correo:</strong> {{ email }}</li> 
+            <li class="list-group-item"><strong>Horario Apertura</strong> {{ horario_apertura }}</li> 
+            <li class="list-group-item"><strong>Capacidad de punto</strong> {{ capacidad_total }}</li> 
+        </ul>
+        <div class="d-flex justify-content-center">
+            <button onclick="window.location.href='/client'" class="btn btn-primary" style="color:white; margin-top: 1em;">Regresar</button>
+        </div>
+    </div>
+{% endblock content %}
